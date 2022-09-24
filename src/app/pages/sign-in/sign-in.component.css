@@ -1,0 +1,328 @@
+input{
+    background-color: whitesmoke;
+    border-radius: 50px;
+    font-size: 1em;
+  }
+  
+  /* imagen principal */
+  .ImgPrincipal{
+    width: 69%;
+    height: 46rem;
+    position:relative;
+    margin-top: -1rem;
+    z-index: 0;
+  }
+  
+  .buttonImg{
+    width: 40%;
+    background-color: var(--morado);
+    color: white;
+    display: flex;
+    position:absolute;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-top: -6em;
+    margin-left: 4rem;
+    border: none;
+    cursor: none;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .ImgPrincipal{
+      width: 0%;
+    }
+    .buttonImg{
+      width: 0;
+      color: white;
+      padding: 0px;
+      font-size: 0rem;
+      border: none;
+      height: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .ImgPrincipal{
+      width: 0%;
+      height: 39rem;
+      position:relative;
+      margin-top: -1rem;
+    }
+    .buttonImg{
+      width: 0;
+      background-color: var(--morado);
+      color: white;
+      border-radius: 10px;
+      padding: 0px;
+      font-size: 1.5rem;
+      margin-top: -7rem;
+      margin-left: 4rem;
+      border: none;
+    }
+  }
+  
+  .form-check{
+    margin-top: 2rem;
+    margin-left: 5rem;
+  }
+  
+  .form-check-label{
+    font-size: 1em;
+  }
+  @media only screen and (max-width: 768px ) {
+    .form-check{
+      margin-top: 2rem;
+      margin-left: 7rem;
+    }
+    .form-check-label{
+      font-size: 29px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .form-check{
+      margin-top: 2rem;
+      margin-left: 4rem;
+    }
+    .form-check-label{
+      font-size: 19px;
+    }
+  }
+  
+  .form-control{
+    font-weight: 400;
+    font-size: .9em;
+  }
+  
+  .input_form{
+    width: 20rem;
+    height: auto;
+    display: flex;
+    margin-bottom: .5em;
+  }
+  @media only screen and (max-width: 768px ) {
+    .input_form{
+      width: 30rem;
+      height: 3.5rem;
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }
+  @media only screen and (max-width: 600px ) {
+    .input_form{
+      width: 20rem;
+      height: 3rem;
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }
+  @media only screen and (max-width: 400px ) {
+    .input_form{
+      width: 19rem;
+      height: 3rem;
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .icon-peq{
+    background-color: var(--morado);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 80px;
+    margin-right: 1rem;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+  @media only screen and (max-width: 768px ) {
+    .icon-peq{
+      background-color: var(--morado);
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50px;
+      margin-right: 1rem;
+      margin-top: 0rem;
+    }
+  }
+  @media only screen and (max-width: 400px ) {
+    .icon-peq{
+      background-color: var(--morado);
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50px;
+      margin-right: 1rem;
+      margin-top: 0rem;
+      margin-left: -1rem;
+    }
+  }
+  
+  .recordarContraseña{
+    margin-top: 1.5rem;
+    margin-bottom: -1rem;
+    margin-left: 5.5rem;
+  }
+  .recordarContraseña a{
+    text-transform: none;
+    color: var(--morado);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .recordarContraseña{
+      margin-top: 2rem;
+      margin-bottom: -1rem;
+      margin-left: 7rem;
+      font-size: 30px;
+      color: var(--morado);
+      font-weight: 500;
+    }
+  
+  }
+  @media only screen and (max-width: 600px ) {
+    .recordarContraseña{
+      margin-top: 1.5rem;
+      margin-bottom: -1rem;
+      margin-left: 5rem;
+      font-size: 20px;
+      color: var(--morado);
+      font-weight: 500;
+    }
+  }
+  @media only screen and (max-width: 400px ) {
+    .recordarContraseña{
+      margin-top: 1.5rem;
+      margin-bottom: -1rem;
+      margin-left: 4.5rem;
+      font-size: 20px;
+      color: var(--morado);
+      font-weight: 500;
+    }
+  }
+  .recordarContraseña:hover{
+    color: rgba(70, 70, 238, 0.87);
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .form-check-input{
+      height: 1.8rem;
+      width: 1.8rem;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .form-check-input{
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-top: 3px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .form-check-input{
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  
+  .material-icons{
+    margin-top: 6px;
+    margin-left: -35px;
+    cursor: pointer;
+    color: var(--morado);
+    font-size: 2rem;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .material-icons{
+      margin-top: 10px;
+      margin-left: -35px;
+      cursor: pointer;
+      color: var(--morado);
+      font-size: 2rem;
+    }
+  }
+  
+  .msjRecuperacionContraseña{
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .msjRecuperacionContraseña{
+      font-size: 1rem;
+      margin-top: -2rem;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: -1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .msjRecuperacionContraseña{
+      font-size: 1rem;
+      margin-top: -2rem;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+      margin-right: -1rem;
+    }
+  }
+  
+  .form-text_1{
+    color: red;
+    margin-left:4.2rem;
+    margin-top: -.5rem;
+    margin-bottom: -1rem;
+  }
+  
+  .form-text_2{
+    color: red;
+    margin-bottom: -1rem;
+    margin-top: 1.2rem;
+    margin-left: 7rem;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .form-text_1{
+      color: red;
+      margin-left:8.5rem;
+      margin-top: -.5rem;
+      margin-bottom: -1rem;
+    }
+    .form-text_2{
+      color: red;
+      margin-bottom: -1rem;
+      margin-top: 1.2rem;
+      margin-left: 12rem;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 600px ) {
+    .form-text_1{
+      color: red;
+      margin-left:4.2rem;
+      margin-top: -.5rem;
+      margin-bottom: -1rem;
+    }
+    .form-text_2{
+      color: red;
+      margin-bottom: -1rem;
+      margin-top: 1.2rem;
+      margin-left: 7rem;
+    }
+  }
+  
+  @media screen and (min-width:305px) and (max-width:400px){
+    button{
+      height: 1.3em;
+      font-size: 1.8em;
+    }
+  }

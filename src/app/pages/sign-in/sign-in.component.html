@@ -1,0 +1,179 @@
+
+<!-- barra de navegacion -->
+
+<div class="containerG">
+    <picture>
+      <img class="ImgPrincipal d-none d-sm-block">
+    </picture>
+  </div>
+  <button class="buttonImg d-none d-sm-block">Bienvenido a Imagenes Diagnosticas</button>
+
+  <!-- Formulario Recuperar Ingreso-->
+
+  <div class="container_form">
+    <div>
+      <img class="logo-colcan" src="/assets/Img/Logo Colcan.jpeg" alt="Logo Colcan">
+    </div>
+
+    <ng-container *ngIf="isShownSignIn">
+
+      <form (ngSubmit)="submitFormLogIn(signInForm)" #signInForm="ngForm">
+        <div class="input_form">
+          <img class="icon-peq" src="assets/Img/Icono Login.png">
+          <input  type="email"
+                id="inputLogin"
+                class="form-control"
+                name="login"
+                placeholder="Usuario"
+                ngModel required autofocus>
+        </div>
+        <div class="input_form">
+          <img class="icon-peq" src="/assets/Img/Icon-password.png">
+          <input type="password"
+                class="form-control"
+                id="inputPassword"
+                name="password"
+                placeholder="Contraseña"
+                [type]="hide ? 'password':'text'"
+                required autofocus ngModel
+                >
+          <i class="material-icons" (click)="hide = !hide">
+            {{ hide ? 'visibility': 'visibility_off'}}
+          </i>
+        </div>
+
+          <div class="form-text_1">
+            <span
+              *ngIf="campoNoValido('contraseña1')">
+                Debe introducir su contraseña
+            </span>
+          </div>
+
+        <div class= "recordarContraseña" >
+          <a (click)= "returnRecuperar()">Olvidé mi contraseña</a>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input">
+          <label class="form-check-label" for="Check">Recordar mi Usuario</label>
+        </div>
+        <button type="submit" class="button-ingresar" routerLink="/dashboard">
+          Ingresar</button>
+      </form>
+    </ng-container>
+
+<!-- Formulario Recuperar Password  -->
+
+    <ng-container *ngIf="isShownRecuperar">
+      <form >
+        <div class="input_form">
+          <img class="icon-peq" src="/assets/Img/Icon-Envelope.png" alt="">
+          <input type="email" class="form-control" placeholder= "Correo" name="correo" [(ngModel)]="correo" required>
+        </div>
+        <div class="container-buttons_recuperar">
+          <button type="submit"  class="button-recuperar" data-bs-toggle="modal" data-bs-target="#recuperarModal">Recuperar</button>
+          <button type="submit" (click)= "returnSignIn($event)" class="button-cancelar">Cancelar</button>
+        </div>
+      </form>
+    </ng-container>
+
+
+     <!-- modal 1 -->
+
+     <div class="modal fade" id="recuperarModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div>
+            <h5 class="modal_title">Contraseña</h5>
+          </div>
+          <div>
+            <img class="modal-envelope" src="/assets//Img/modal-envelope.png" alt="">
+          </div>
+          <div class="modal-body">
+            <p> Se ha enviado un enlace de recuperacion de contraseña a al correo: {{correo}} </p>
+          </div>
+            <button type="button" (click)= "returnNewPass($event)" class="button-modal_aceptar" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+  <!-- Formulario para nueva Password -->
+
+    <ng-container *ngIf= "isShownNewPass">
+      <h4 class="msjRecuperacionContraseña">Ingresa tu nueva contraseña, para aplicar el cambio inmediamente</h4>
+
+      <form [formGroup]="formularioPass" (ngSubmit)="submitFormularioShow()">
+        <div class="input_form">
+          <img class="icon-peq" src="/assets/Img/Icon-password.png" alt="">
+          <input
+          type="password"
+          class="form-control"
+          id="contraseña"
+          formControlName="contraseña"
+          placeholder="Nueva contraseña"
+          [type]="hide ? 'password':'text'">
+          <i class="material-icons" (click)="hide = !hide">
+            {{ hide ? 'visibility': 'visibility_off'}}
+          </i>
+        </div>
+
+
+
+        <div class="input_form">
+          <img class="icon-peq" src="/assets/Img/Icon-password.png" alt="">
+          <input
+          type="password"
+          class="form-control"
+          id="ConfirmarContraseña"
+          formControlName="ConfirmarContraseña"
+          placeholder="Confirmar contraseña"
+          [type]="hide ? 'password':'text'">
+          <i class="material-icons" (click)="hide = !hide">
+            {{ hide ? 'visibility': 'visibility_off'}}
+          </i>
+        </div>
+
+        <div class="form-text_1">
+          <span
+            *ngIf="campoNoValidoPass('contraseña')">
+              Debe tener minimo 8 caracteres.
+          </span>
+        </div>
+
+        <div class="form-text_2">
+          <span
+            *ngIf="campoNoValidoPass('ConfirmarContraseña')">
+              Deben ser iguales.
+          </span>
+        </div>
+
+        <div class="container-buttons_restaurar">
+          <button type="submit" class="button-recuperar" [disabled]="formularioPass.invalid" data-bs-toggle="modal" data-bs-target="#restaurarModal" >Restaurar</button>
+          <button type="submit" class="button-cancelar" (click)= "returnSignIn($event)">Cancelar</button>
+        </div>
+      </form>
+    </ng-container>
+
+
+     <!-- modal 2 -->
+
+     <div class="modal fade" id="restaurarModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div>
+            <h5 class="modal_title">Contraseña</h5>
+          </div>
+          <div>
+            <img class="modal-envelope" src="/assets//Img/modal-ok.png" alt="">
+          </div>
+          <div class="modal-body">
+            <p>Tu contraseña se ha restaurado exitosamente. <br> Ya puedes acceder a tu cuenta con nueva contraseña.</p>
+          </div>
+            <button type="button" (click)= "returnSignIn($event)" class="button-modal_aceptar" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

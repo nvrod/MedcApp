@@ -1,1 +1,704 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --morado:#764d95;
+    --grisClaro:#e9ecef;
+    --fontButton: font-family: 'Teko', sans-serif;
+  }
+  
+  html{
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after{
+    box-sizing: inherit;
+  }
+  
+  a{
+    text-decoration: none;
+    color: var(--morado);
+  }
+  
+  .containerG{
+    background-image: url(./assets/Img/Img-Diagnostica.jpeg);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .containerG{
+      background-color:white;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .containerG{
+      background-color:white;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .containerG{
+      background-color:white;
+    }
+  }
+  
+  
+  /* botones */
+  
+  button{
+    font-family: var(--fontButton);
+  }
+  
+  .container-buttons{
+    display:flex;
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  
+  .container-buttons_recuperar{
+    margin-top: 4rem;
+  }
+  
+  .container-buttons_restaurar{
+    margin-top: 4rem;
+  }
+  
+  
+  
+  .button-ingresar{
+    background-color: var(--morado);
+    color: white;
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: none;
+  }
+  
+  
+  .button-recuperar{
+    background-color: var(--morado);
+    color: white;
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
+    margin-left: 5rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: none;
+  }
+  
+  
+  .button-cancelar{
+    background-color: white;
+    color: var(--morado);
+    width: 12rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    border: solid 1.5px var(--morado);
+    border-radius: 10px;
+    font-size: 1.5rem;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .button-ingresar{
+      background-color: var(--morado);
+      color: white;
+      width: 22rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 5rem;
+      border-radius: 10px;
+      font-size: 2.1rem;
+      border: none;
+    }
+  
+    .button-recuperar{
+      background-color: var(--morado);
+      color: white;
+      width: 22rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -2rem;
+      margin-left: 5rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+      font-size: 2.1rem;
+      border: none;
+    }
+  
+    .button-cancelar{
+      background-color: white;
+      color: var(--morado);
+      width: 22rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 5rem;
+      border: solid 1.5px var(--morado);
+      border-radius: 10px;
+      font-size: 2.1rem;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 600px ) {
+    .button-ingresar{
+      background-color: var(--morado);
+      color: white;
+      width: 15rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 3rem;
+      border-radius: 10px;
+      font-size: 2rem;
+      border: none;
+    }
+  
+    .button-recuperar{
+      background-color: var(--morado);
+      color: white;
+      width: 15rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -2rem;
+      margin-left: 4rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+      font-size: 2rem;
+      border: none;
+    }
+  
+  
+    .button-cancelar{
+      background-color: white;
+      color: var(--morado);
+      width: 15rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 4rem;
+      border: solid 1.5px var(--morado);
+      border-radius: 10px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .button-ingresar{
+      background-color: var(--morado);
+      color: white;
+      width: 15rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 2.5rem;
+      border-radius: 10px;
+      font-size: 2rem;
+      border: none;
+    }
+  
+    .button-recuperar{
+      background-color: var(--morado);
+      color: white;
+      width: 14rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -2rem;
+      margin-left: 4rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+      font-size: 2rem;
+      border: none;
+    }
+  
+  
+    .button-cancelar{
+      background-color: white;
+      color: var(--morado);
+      width: 14rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 4rem;
+      border: solid 1.5px var(--morado);
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+  }
+  
+  
+  .button_modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-modal_aceptar{
+    background-color: var(--morado);
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    margin-left: 11rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid 1.5px var(--morado);
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .button-modal_aceptar{
+      background-color: var(--morado);
+      color: white;
+      height: 3rem;
+      width: 10rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      margin-left: 7.8rem;
+      font-weight: 600;
+      border-radius: 10px;
+      border: solid 1.5px var(--morado);
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .button-modal_aceptar{
+      background-color: var(--morado);
+      color: white;
+      height: 3rem;
+      width: 10rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      margin-left: 6.5rem;
+      font-weight: 600;
+      border-radius: 10px;
+      border: solid 1.5px var(--morado);
+    }
+  }
+  
+  .button-crear{
+    background-color: var(--morado);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 8rem;
+    height: 2.3rem;
+    font-size: 1.5em;
+    margin-left: 2rem;
+  }
+  
+  
+  /* container Forms */
+  
+  .container_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55rem;
+    margin-right: 0rem;
+    margin-top: -45rem;
+    padding: 1rem;
+    background-color: var(--grisClaro);
+    border-radius: 60px;
+    height: 45rem;
+    width: 25rem;
+    z-index: 2;
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .container_form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 60px;
+      height: 56rem;
+      width: 50rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .container_form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      margin-top: 1rem;
+      padding: 4rem;
+      background-color: white;
+      border-radius: 60px;
+      height: 50rem;
+      width: 26rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .container_form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      padding: 4rem;
+      background-color: white;
+      border-radius: 60px;
+      height: 50rem;
+      width: 24rem;
+    }
+  }
+  
+  .container_form-empty{
+    padding: 2.2rem;
+  }
+  
+  .logo-colcan{
+    width: 13rem;
+    height: 13rem;
+    margin-top: -7rem;
+    margin-bottom: 4rem;
+    border-radius: 100px;
+    border: solid var(--morado);
+  }
+  
+  @media only screen and (max-width: 768px ) {
+    .logo-colcan{
+      width: 19rem;
+      height: 19rem;
+      margin-top: -4rem;
+      margin-bottom: 3rem;
+      margin-left: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .logo-colcan{
+      width: 14rem;
+      height: 14rem;
+      margin-top: -4rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .logo-colcan{
+      width: 13rem;
+      height: 13rem;
+      margin-top: -4rem;
+      margin-bottom: 3rem;
+      margin-left: 1.3rem;
+    }
+  }
+  
+  /* Modales */
+  
+    /* modal recuperacion */
+  
+  @media only screen and (max-width: 600px ) {
+    .modal{
+      width: 24rem;
+      margin-left: .9rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .modal{
+      width: 22rem;
+      margin-left: .9rem;
+    }
+  }
+  
+  .modal_title{
+    text-align: center;
+    color: #764d95;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1.5px;
+  }
+  
+  .modal-envelope{
+    height: 7rem;
+    width: 15rem;
+    margin-top: -1rem;
+    margin-left: 8rem;
+  }
+  
+  @media only screen and (max-width: 600px ) {
+    .modal-envelope{
+      height: 7rem;
+      width: 15rem;
+      margin-top: -1rem;
+      margin-left: 4.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 400px ) {
+    .modal-envelope{
+      height: 7rem;
+      width: 15rem;
+      margin-top: -1rem;
+      margin-left: 4rem;
+    }
+  }
+  
+  .modal-body{
+    text-align: center;
+    margin-top: -1rem;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+  
+  
+  @media only screen and (max-width: 600px ) {
+    .modal-body{
+      text-align: center;
+      margin-top: -1rem;
+      margin-left: 1.3rem;
+      font-weight: 500;
+    }
+  }
+  
+  .modal-body_restaurado{
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+  
+  .modal-dialog{
+    max-width: 500px;
+    margin: 7.75rem auto;
+  }
+  
+  .prueba_modal{
+    margin-top: -5rem;
+    margin-right: 5rem;
+  }
+  
+  
+  /* home / usuarios / roles */
+  
+  .navBar{
+    background-color:var(--morado);
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .linkSalir{
+    color:aliceblue;
+    font-size: 2rem;
+    margin-left: 50rem;
+    display: flex;
+    text-decoration: none;
+  }
+  
+  .containerDashboard{
+    display: flex;
+  
+  }
+  
+  .imgDashboard{
+    width: 80rem;
+    height: 13rem;
+  }
+  
+  .containerButton{
+    margin-left: 45rem;
+    margin-top: -5rem;
+    font-family: 'Teko', sans-serif;
+  }
+  
+  .logoDasboard{
+    height: 10rem;
+    width: 10rem;
+    margin-left: 5rem;
+    margin-top: -15rem;
+  }
+  
+  .buttonDashboard{
+    width: 10rem;
+    height: 3rem;
+    color: gray;
+    margin-right: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  
+  .buttonDashboard:hover{
+    background-color: gray;
+    color: whitesmoke;
+  }
+  
+  .containerInfo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .textoDashboard{
+    font-size: 1.3;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .imgPrueba{
+    width: 18.5rem;
+  }
+  
+  .dropdown-item{
+    text-align: center;
+    font-size: 1.6rem;
+    color: gray;
+  }
+  
+  .dropdown-item:hover{
+    background-color: gray;
+    color: whitesmoke;
+  }
+  
+  
+  .container-titulo{
+    display: flex;
+    align-items: center;
+    height: 6em;
+  }
+  
+  .LogoDash{
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .titulo-dash{
+    color: var(--morado);
+    margin-top: 2rem;
+  }
+  
+  .container-navBar{
+    width: 100%;
+    height: 3rem;
+    background-color: #764d95;
+  }
+  
+  .btnDash1{
+    margin-left: 2rem;
+  }
+  .btnDash,.btnDash1{
+    background-color: var(--morado);
+    color: white;
+    height: 3rem;
+    border: none;
+    border-right: .5px solid black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 2px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .btnDash:hover,.btnDash1:hover{
+    background-color: whitesmoke;
+    color: gray;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+  }
+  
+  .dropdown-menu{
+    width: 12.5rem;
+  }
+  
+  .dropdown-item{
+    font-size: 1.3rem;
+  }
+  
+  .dropdown-item:hover{
+    background-color: var(--morado);
+  }
+  
+  .hero{
+    background-image: url('./assets/Img/Img-Diagnostica.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 79vh;
+    padding-top: 3rem;
+  }
+  
+  
+  
