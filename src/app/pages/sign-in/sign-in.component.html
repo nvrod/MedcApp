@@ -6,13 +6,13 @@
       <img class="ImgPrincipal d-none d-sm-block">
     </picture>
   </div>
-  <button class="buttonImg d-none d-sm-block">Bienvenido a Imagenes Diagnosticas</button>
+  <div class="buttonImg d-none d-sm-block">Bienvenido usuario EPS</div>
 
   <!-- Formulario Recuperar Ingreso-->
 
   <div class="container_form">
     <div>
-      <img class="logo-colcan" src="/assets/Img/Logo Colcan.jpeg" alt="Logo Colcan">
+      <img class="logo-eps" src="/assets/Img/Logo_EPS.jpeg" alt="Logo Eps">
     </div>
 
     <ng-container *ngIf="isShownSignIn">
@@ -70,17 +70,16 @@
           <img class="icon-peq" src="/assets/Img/Icon-Envelope.png" alt="">
           <input type="email" class="form-control" placeholder= "Correo" name="correo" [(ngModel)]="correo" required>
         </div>
-        <div class="container-buttons_recuperar">
+
           <button type="submit"  class="button-recuperar" data-bs-toggle="modal" data-bs-target="#recuperarModal">Recuperar</button>
-          <button type="submit" (click)= "returnSignIn($event)" class="button-cancelar">Cancelar</button>
-        </div>
+          <button type="submit" (click)= "returnSignIn($event)" class="button-recuperar button-cancelar">Cancelar</button>
       </form>
     </ng-container>
 
 
      <!-- modal 1 -->
 
-     <div class="modal fade" id="recuperarModal" tabindex="-1">
+     <div class="modal fade" id="recuperarModal" tabindex="1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div>
