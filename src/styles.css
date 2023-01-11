@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --morado:#764d95;
+    --main_color:#54b3d6;
     --grisClaro:#e9ecef;
     --fontButton: font-family: 'Teko', sans-serif;
   }
@@ -9,13 +9,17 @@
     box-sizing: border-box;
   }
   
+  body{
+    font-family: 'Poppins', sans-serif !important;
+  }
+
   *, *:before, *:after{
     box-sizing: inherit;
   }
   
   a{
     text-decoration: none;
-    color: var(--morado);
+    color: var(--main_color);
   }
   
   .containerG{
@@ -48,6 +52,7 @@
   
   button{
     font-family: var(--fontButton);
+    text-transform: uppercase;
   }
   
   .container-buttons{
@@ -55,16 +60,9 @@
     flex-direction: column;
     margin-top: 8rem;
   }
-  
 
-  .container-buttons_restaurar{
-    margin-top: 4rem;
-  }
-  
-  
-  
   .button-ingresar{
-    background-color: var(--morado);
+    background-color: var(--main_color);
     color: white;
     width: 8em;
     height: 2em;
@@ -79,7 +77,7 @@
   
   
   .button-recuperar{
-    background-color: var(--morado);
+    background-color: var(--main_color);
     color: white;
     width: 8rem;
     height: 2em;
@@ -95,13 +93,13 @@
   
   .button-cancelar{
     background-color: white;
-    color: var(--morado);
-    border: solid 1.5px var(--morado);
+    color: var(--main_color);
+    border: solid 1.5px var(--main_color);
   }
   
   @media only screen and (max-width: 768px ) {
     .button-ingresar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 22rem;
       height: 4rem;
@@ -116,7 +114,7 @@
     }
   
     .button-recuperar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 22rem;
       height: 4rem;
@@ -134,7 +132,7 @@
   
     .button-cancelar{
       background-color: white;
-      color: var(--morado);
+      color: var(--main_color);
       width: 22rem;
       height: 4rem;
       display: flex;
@@ -143,7 +141,7 @@
       align-items: center;
       margin-top: 1rem;
       margin-left: 5rem;
-      border: solid 1.5px var(--morado);
+      border: solid 1.5px var(--main_color);
       border-radius: 10px;
       font-size: 2.1rem;
     }
@@ -152,7 +150,7 @@
   
   @media only screen and (max-width: 600px ) {
     .button-ingresar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 15rem;
       height: 4rem;
@@ -167,7 +165,7 @@
     }
   
     .button-recuperar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 15rem;
       height: 4rem;
@@ -186,7 +184,7 @@
   
     .button-cancelar{
       background-color: white;
-      color: var(--morado);
+      color: var(--main_color);
       width: 15rem;
       height: 4rem;
       display: flex;
@@ -195,7 +193,7 @@
       align-items: center;
       margin-top: 1rem;
       margin-left: 4rem;
-      border: solid 1.5px var(--morado);
+      border: solid 1.5px var(--main_color);
       border-radius: 10px;
       font-size: 1.5rem;
     }
@@ -203,7 +201,7 @@
   
   @media only screen and (max-width: 400px ) {
     .button-ingresar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 15rem;
       height: 4rem;
@@ -218,7 +216,7 @@
     }
   
     .button-recuperar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       width: 14rem;
       height: 4rem;
@@ -237,7 +235,7 @@
   
     .button-cancelar{
       background-color: white;
-      color: var(--morado);
+      color: var(--main_color);
       width: 14rem;
       height: 4rem;
       display: flex;
@@ -246,7 +244,7 @@
       align-items: center;
       margin-top: 1rem;
       margin-left: 4rem;
-      border: solid 1.5px var(--morado);
+      border: solid 1.5px var(--main_color);
       border-radius: 10px;
       font-size: 2rem;
     }
@@ -260,7 +258,7 @@
   }
   
   .button-modal_aceptar{
-    background-color: var(--morado);
+    background-color: var(--main_color);
     color: white;
     height: 3rem;
     width: 10rem;
@@ -272,12 +270,12 @@
     margin-left: 11rem;
     font-weight: 600;
     border-radius: 10px;
-    border: solid 1.5px var(--morado);
+    border: solid 1.5px var(--main_color);
   }
   
   @media only screen and (max-width: 600px ) {
     .button-modal_aceptar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       height: 3rem;
       width: 10rem;
@@ -289,13 +287,13 @@
       margin-left: 7.8rem;
       font-weight: 600;
       border-radius: 10px;
-      border: solid 1.5px var(--morado);
+      border: solid 1.5px var(--main_color);
     }
   }
   
   @media only screen and (max-width: 400px ) {
     .button-modal_aceptar{
-      background-color: var(--morado);
+      background-color: var(--main_color);
       color: white;
       height: 3rem;
       width: 10rem;
@@ -307,12 +305,12 @@
       margin-left: 6.5rem;
       font-weight: 600;
       border-radius: 10px;
-      border: solid 1.5px var(--morado);
+      border: solid 1.5px var(--main_color);
     }
   }
   
   .button-crear{
-    background-color: var(--morado);
+    background-color: var(--main_color);
     color: white;
     border-radius: 10px;
     border: none;
@@ -338,7 +336,6 @@
     border-top-left-radius: 60px;
     height: 100%;
     width: 24rem;
-    z-index: 2;
   }
   
   .container_form-empty{
@@ -351,13 +348,14 @@
     margin-top: -2rem;
     margin-bottom: 4rem;
     border-radius: 100px;
-    border: solid var(--morado);
+    border: solid var(--main_color);
   }
   
   /* Modales */
   
     /* modal recuperacion */
-  
+
+
   @media only screen and (max-width: 600px ) {
     .modal{
       width: 24rem;
@@ -446,7 +444,7 @@
   /* home / usuarios / roles */
   
   .navBar{
-    background-color:var(--morado);
+    background-color:var(--main_color);
     height: 3rem;
     width: 100%;
     display: flex;
@@ -551,7 +549,7 @@
   }
   
   .titulo-dash{
-    color: var(--morado);
+    color: var(--main_color);
     margin-top: 2rem;
   }
   
@@ -565,7 +563,7 @@
     margin-left: 2rem;
   }
   .btnDash,.btnDash1{
-    background-color: var(--morado);
+    background-color: var(--main_color);
     color: white;
     height: 3rem;
     border: none;
@@ -594,7 +592,7 @@
   }
   
   .dropdown-item:hover{
-    background-color: var(--morado);
+    background-color: var(--main_color);
   }
   
   .hero{
@@ -607,3 +605,5 @@
   
   
   
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

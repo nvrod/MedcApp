@@ -1,30 +1,23 @@
-<div class="container-titulo">
-    <a routerLink="/dashboard"><img src="assets/Img/Logo_EPS.jpeg" alt="Logo Colcal" class="LogoDash"></a>
-    <h1 class="titulo-dash">Centro de Informacion</h1>
-  </div>
-  
-  <nav class="container-navBar">
-    <button class="btnDash1">Atención</button>
-    <button class="btnDash">Exámenes</button>
-    <button class="btnDash" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Configuración</button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item">Usuarios</a></li>
-        <li><a class="dropdown-item">Medicos</a></li>
-      </ul>
-      <a href="/"><button class="btnCS" >Cerrar Sesión</button></a>
-  </nav>
-  
-  <div class="hero">
-    <div class="container-dash">
-      <img class="Img-Dash1" src="/assets/Img/Img-Dash1.webp" alt="">
-        <div class="container-dash_info">
-          <h3 >Titulo de introducción</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, obcaecati voluptatibus. Dolorem delectus sunt sint odit fugit officiis possimus alias, ipsa inventore unde est! Non eum doloribus amet libero expedita.
-          </p>
-          <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, obcaecati voluptatibus. Dolorem delectus sunt sint odit fugit officiis possimus alias, ipsa inventore unde est! Non eum doloribus amet libero expedita.
-          </p>
-        </div>
-    </div>
-  </div>
-  
+<nav>
+  <ul class="log_search-ctn">
+    <li><a class="first_link"routerLink="/sign-in">Iniciar Sesion</a></li>
+    <mat-icon fontIcon="search"></mat-icon>
+    <input class="search_input" type="search" placeholder="Escribe lo que estas buscando">
+    <p class="cpny_name">Nuestra EPS</p>
+    <a routerLink="/home"><img src="assets/Img/Logo_EPS.jpeg" alt="Logo Colcal" class="logo_home"></a>
+  </ul>
+  <ul class="sec_links-ctn">
+    <li><a class="second_link" routerLink="/home">Inicio</a></li>
+    <li><a class="second_link" routerLink="/">Afiliados</a></li>
+    <li><a class="second_link" routerLink="/">Empleadores</a></li>
+    <li><a class="second_link" routerLink="/">Independientes</a></li>
+    <li><a class="second_link" routerLink="/">Asesores comerciales</a></li>
+    <li><a class="second_link" routerLink="/">Prestadores servicios</a></li>
+    <li><a class="second_link" routerLink="/">PAC</a></li>
+  </ul>
+</nav> 
+
+<div class="hero_ctn">
+  <h1>Conoce los copagos y las cuotas moderadoras para el 2023 </h1>
+  <button>Ingresa aqui</button>
+</div>

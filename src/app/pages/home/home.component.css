@@ -1,54 +1,136 @@
 :root {
-    --morado:#764d95;
-    --fontButton:font-family: 'Teko', sans-serif;
+    --main_color:#54b3d6;
+    --grisClaro:#e9ecef;
+    --fontButton: font-family: 'Teko', sans-serif;
   }
-  
-  html{
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after{
-    box-sizing: inherit;
-  }
-  
-  .container-dash{
+
+/*<-------- Navbar -------->*/
+nav ul{
     display: flex;
-    margin-top: 1rem;
-  }
-  
-  .Img-Dash1{
-    width: 22rem;
-    height: 15rem;
-    margin-left: 5rem;
-    margin-right: 2rem;
-    border-radius: 10px;
-  }
-  
-  .container-dash_info{
+    flex-direction: row;
+    align-items: center;
+    height: 4em;
+}
+
+
+li{
+    list-style: none;
+    padding-right: 1em;
+}
+
+.log_search-ctn{
+    background-color: var(--main_color);
+    margin-bottom: 0;
+}
+
+.log_search-ctn mat-icon{
+    z-index: 1;
+    font-weight: 900;
+    margin-right: 5px;
+    margin-left: 2em;
+    font-size: 1.8em;
+}
+
+
+.cpny_name{
+    font-family: 'Kalam', cursive;
+    position: fixed;
+    right: 6em;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.logo_home{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    position: fixed;
+    right: 2em;
+    top: 4px;
+}
+
+.first_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    padding: .5em 1.4em;
     background-color: whitesmoke;
-    margin-right: 5rem;
-    margin-left: 5rem;
-    border-radius: 10px;
-    padding: 2rem;
-  }
-  
-  .btnCS{
-    background-color: var(--morado);
-    height: 2.2em;
-    color: white;
-    font-weight: 600;
-    font-size: 1.3em;
-    margin-left: -2em;
-    margin-left: 23em;
+    border-radius: 15px;
+    width: 15em;
+    font-weight: 900;
+}
+
+.search_input{
+    outline: none;
+    border-radius: 15px;
+    width: 35em;
+    padding: .3em 1em;
     border: none;
-  }
-  
-  .btnCS:hover{
-    background-color: var(--grisClaro);
-    color: gray;
-  }
-  
-  
-  .dropdown-item{
-    cursor: pointer;
-  }
+}
+
+.sec_links-ctn{
+    margin-left: .5em;
+}
+
+.second_link{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        to right,
+        #54b3d6,
+        #54b3d6 50%,
+        rgb(0, 0, 0) 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+    
+}
+
+.second_link:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+}
+
+.second_link:hover {
+    background-position: 0;
+}
+.second_link:hover::before {
+    width: 100%;
+}
+
+/*<-------- Hero Container -------->*/
+
+.hero_ctn{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/Img/Home_hero.png");
+    background-size: cover;
+    height: 70vh;
+    margin-top: -1em;
+    padding: 5em;
+}
+
+.hero_ctn h1{
+    color: #e9ecef;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3.5em;
+    width: 18em;
+}
+
+.hero_ctn button{
+    padding: .7em;
+    margin-top: 1em;
+    background-color: transparent;
+    color: #e9ecef;
+    outline: none;
+    border-radius: 15px;
+    font-weight: 900;
+}

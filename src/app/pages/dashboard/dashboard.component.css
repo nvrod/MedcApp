@@ -1,0 +1,54 @@
+:root {
+    --main_color:#54b3d6;
+    --fontButton:font-family: 'Teko', sans-serif;
+  }
+  
+  html{
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after{
+    box-sizing: inherit;
+  }
+  
+  .container-dash{
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .Img-Dash1{
+    width: 22rem;
+    height: 15rem;
+    margin-left: 5rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+  }
+  
+  .container-dash_info{
+    background-color: whitesmoke;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .btnCS{
+    background-color: var(--main_color);
+    height: 2.2em;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-left: -2em;
+    margin-left: 23em;
+    border: none;
+  }
+  
+  .btnCS:hover{
+    background-color: var(--grisClaro);
+    color: gray;
+  }
+  
+  
+  .dropdown-item{
+    cursor: pointer;
+  }
