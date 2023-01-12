@@ -2,9 +2,11 @@
 :root {
     --main_color:#54b3d6;
     --grisClaro:#e9ecef;
+    --dark_blue:#1d3557;
+
     --fontButton: font-family: 'Teko', sans-serif;
   }
-  
+
   html{
     box-sizing: border-box;
   }

@@ -1,26 +1,27 @@
 :root {
     --main_color:#54b3d6;
     --grisClaro:#e9ecef;
-    --fontButton: font-family: 'Teko', sans-serif;
   }
-
-/*<-------- Navbar -------->*/
-nav ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 4em;
-}
-
 
 li{
     list-style: none;
-    padding-right: 1em;
+}
+
+/*<-------- Navbar -------->*/
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
 }
 
 .log_search-ctn{
     background-color: var(--main_color);
     margin-bottom: 0;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .log_search-ctn mat-icon{
@@ -31,10 +32,9 @@ li{
     font-size: 1.8em;
 }
 
-
 .cpny_name{
     font-family: 'Kalam', cursive;
-    position: fixed;
+    position: absolute;
     right: 6em;
     margin-top: 50px;
     text-transform: uppercase;
@@ -44,9 +44,9 @@ li{
     width: 3.5em;
     height: 3.5em;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     right: 2em;
-    top: 4px;
+    top: 12px;
 }
 
 .first_link{
@@ -57,7 +57,7 @@ li{
     background-color: whitesmoke;
     border-radius: 15px;
     width: 15em;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .search_input{
@@ -69,11 +69,20 @@ li{
 }
 
 .sec_links-ctn{
-    margin-left: .5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: var(--grisClaro);
+    width: 100%;
+    gap: 1.5em;
+    height: 4em;
 }
 
 .second_link{
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9em;
     background-image: linear-gradient(
         to right,
         #54b3d6,
@@ -82,11 +91,10 @@ li{
       );
       background-size: 200% 100%;
       background-position: -100%;
-      background-clip: text;
+      background-clip:initial;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: all 0.3s ease-in-out;
-    
 }
 
 .second_link:before {
@@ -94,18 +102,18 @@ li{
     background: #54b3d6;
     display: block;
     position: absolute;
-    bottom: -3px;
-    left: 0;
+    bottom: 30px;
+    left: 30px;
     width: 0;
     height: 3px;
+    transition: all 0.7s ease-in-out;
 }
 
 .second_link:hover {
     background-position: 0;
+    padding-bottom: 0;
 }
-.second_link:hover::before {
-    width: 100%;
-}
+
 
 /*<-------- Hero Container -------->*/
 
@@ -113,7 +121,7 @@ li{
     background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/Img/Home_hero.png");
     background-size: cover;
     height: 70vh;
-    margin-top: -1em;
+    margin-top: 9em;
     padding: 5em;
 }
 
@@ -133,4 +141,411 @@ li{
     outline: none;
     border-radius: 15px;
     font-weight: 900;
+}
+
+
+/*<-------- Second container -------->*/
+
+.first-cnt{
+    background-color: var(--dark_blue);
+    height: 75vh;
+    width: 45%;
+}
+
+.first-cnt_title{
+    color: #e9ecef;
+    font-size: 1.8em;
+    font-weight: 800;
+    border-top: 2px solid var(--grisClaro);
+    width: 5em;
+    margin-top: 6em;
+    margin-left: -5em;
+    padding-top: 10px;
+}
+
+.sub-cnt{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    right: 2em;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.card{
+    width: 16em;
+    height: 28em;
+}
+
+.card:hover{
+    -webkit-box-shadow: 10px 7px 5px -6px rgba(218,228,232,1);
+    -moz-box-shadow: 10px 7px 5px -6px rgba(218,228,232,1);
+    box-shadow: 10px 7px 5px -6px rgba(218,228,232,1);
+}
+.card img{
+    margin-bottom: 1em;
+    width: 16em;
+    height: 10em;
+    place-self: center;
+}
+
+.card h2{
+    font-weight: 600;
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+.card p{
+    font-size: .9em;
+    padding: .5em 1em;
+}
+
+.card-link{
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    width: 3em;
+}
+
+
+/*<-------- Segundo Container -------->*/
+
+.second-cnt{
+    height: 75vh;
+    margin-top: 1em;
+}
+
+.sub-cnt_two{
+    padding: 1em;
+    margin-left: 1em;
+}
+
+.sec-card{
+    width: 17em;
+    padding: 2em 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--grisClaro);
+}
+
+.sec-card_img{
+    width: 15em;
+    height: 15em;
+}
+
+
+.sec-card h2{
+    font-size: 1em;
+    font-weight: 800;
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+
+.title-ctn{
+    padding: 2em 2em;
+}
+
+.title-ctn h1{
+    font-weight: 800;
+    font-size: 2em;
+    width: 5em;
+    border-top: 2px solid var(--main_color);
+    padding-top: 10px;
+    margin-top: .4em;
+    color: var(--main_color);
+}
+
+.title-ctn button{
+    border-radius: 15px;
+    padding: .3em 1.4em;
+    width: 13em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main_color);
+}
+
+/*<-------- Tercer Container -------->*/
+
+.third-cnt{
+    background-color: #f8f9fa;
+    height: 83vh;
+}
+
+.third-cnt_title{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: var(--main_color);
+}
+
+.third-cnt_title::after{
+    content: ""; /* So that it will show */
+    display: block; /* So it can have width */
+    width: 10%; /* Make sure position on these elements is relative (or something besides default) */
+    border-bottom: 2px solid var(--main_color);
+    margin: 0 auto; /* Center the line */
+}
+
+.sub-cnt_three{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.th-card_grid{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6em;
+}
+
+.th-sec-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: 33em;
+    padding-right: 1em;
+}
+
+.th-sec-card img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 180px;
+    height: 100px;
+}
+
+.th-sec-card h2{
+    margin-left: 1em;
+    font-size: 1.2em;
+}
+
+.th-card_grid h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.th-card{
+    background-color: var(--dark_blue);
+    width: 27em;
+    border-radius: 10px;
+}
+
+
+.trasnfer-cnt{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/Img/Transfer.png");
+    width: 30em;
+    height: 22em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2.25em;
+    margin-left: 3.4em;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+
+.trasnfer-cnt h3{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 10em;
+}
+
+.trasnfer-cnt button{
+    padding: .7em;
+    margin-top: 1em;
+    background-color: transparent;
+    color: #e9ecef;
+    outline: none;
+    border-radius: 15px;
+    font-weight: 900;
+    display: flex;
+}
+
+
+/*<-------- Cuarto Contaiener -------->*/
+
+.fth-cnt{
+    height: 45vh;
+    padding: 2em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.sub-fth_cnt{
+    height: 15em;
+    width: 52em;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  16px 16px 32px #d6d6d6,
+                 -16px -16px 32px #ffffff;                
+}
+
+.sub-fth_cnt{
+    background-image: url('../../../assets/Img/Complementary.png');
+    background-size: 15em;
+    background-repeat: no-repeat;
+    background-position: 570px 20px;
+}
+
+
+.sub-fth_cnt h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main_color);
+}
+
+.sub-fth_cnt p{
+    font-size: 1em;
+    margin-top: 2em;
+    padding: 1em;
+    border-left: 2px solid var(--main_color);
+    height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.sub-fth_cnt button{
+    border-radius: 15px;
+    padding: .3em 1.4em;
+    width: 13em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main_color);
+}
+
+/*<-------- Quinto Container -------->*/
+
+.fifth-cnt{
+    height: 95vh;
+}
+
+.fif-sub-cnt{
+    align-items:stretch;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.fif-card{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 23em;
+    height: 29em;
+    background-color: white;
+    box-shadow:  5px 5px 10px #d6d6d6,
+                -5px -5px 10px #ffffff;
+
+}
+
+.fif-card p, h4 {
+    padding: 0 2em;
+}
+
+.fif-card a{
+    font-weight: 600;
+    padding: 0 2em;
+}
+
+.fif-card img{
+    width: 23em;
+    height: 10em;
+    margin-bottom: 20px;
+}
+
+.fif-card h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: -8px;
+}
+
+.fif-card p{
+    font-size: 14px;
+
+}
+
+.fif-card-link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fif-sub-cnt button{
+    background-color: transparent;
+    border-radius: 15px;
+    padding: .4em 1.4em;
+    color: var(--main_color);
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*<-------- Sexto container -------->*/
+
+.six-cnt{
+    height: 75vh;
+}
+
+.six-sub-cnt{
+    background-color: var(--grisClaro);
+    height: 279px;
+    width: 100%;
+    margin-top: 6em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.six-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20em;
+    padding: 1em;
+}
+
+.six-card img{
+    margin-bottom: 2em;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    border: 4px solid #6c757d;
+    padding: .5em;
+    margin-top: -8em;
+}
+
+.six-card h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main_color);
+}
+
+.six-card button{
+    border-radius: 15px;
+    padding: .3em 1.4em;
+    width: 10em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main_color);
+}
+
+footer{
+    text-align: center;
+    padding-top: 1em;
+    font-weight: 800;
+    font-size: .9em;
+    font-family: 'Merienda', cursive;
 }
