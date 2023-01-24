@@ -49,8 +49,8 @@
             </span>
           </div>
 
-        <div class= "recordarContraseña" >
-          <a (click)= "returnRecuperar()">Olvidé mi contraseña</a>
+        <div class="recordar-password" >
+          <a (click)="returnRecuperar()">Olvidé mi contraseña</a>
         </div>
 
         <div class="mb-3 form-check">
@@ -71,7 +71,7 @@
           <input type="email" class="form-control" placeholder= "Correo" name="correo" [(ngModel)]="correo" required>
         </div>
 
-          <button type="submit"  class="button-recuperar" data-bs-toggle="modal" data-bs-target="#recuperarModal">Recuperar</button>
+          <button type="submit" class="button-recuperar" data-bs-toggle="modal" data-bs-target="#recuperarModal" >Recuperar</button>
           <button type="submit" (click)= "returnSignIn($event)" class="button-recuperar button-cancelar">Cancelar</button>
       </form>
     </ng-container>
