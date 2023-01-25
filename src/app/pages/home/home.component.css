@@ -168,6 +168,7 @@ nav{
     grid-template-columns: repeat(4, 1fr);
     position: absolute;
     right: 2em;
+    left: 15em;
     margin-top: 2em;
     gap: 1em;
 }
@@ -219,11 +220,16 @@ nav{
 
 .sub-cnt_two{
     padding: 1em;
-    margin-left: 1em;
+    margin-left: 3em;
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    margin-right: 2em;
+    margin-top: 5em;
 }
 
 .sec-card{
-    width: 17em;
+    width: 20em;
     padding: 2em 1em;
     border-radius: 10px;
     display: flex;
@@ -234,7 +240,7 @@ nav{
 }
 
 .sec-card_img{
-    width: 15em;
+    width: 16em;
     height: 15em;
 }
 
@@ -461,7 +467,7 @@ nav{
 
 .fif-card img{
     width: 23em;
-    height: 10em;
+    height: 11em;
     margin-bottom: 20px;
 }
 
@@ -482,7 +488,7 @@ nav{
     gap: 5px;
 }
 
-.fif-sub-cnt button{
+.fif-sub-cnt-button{
     background-color: transparent;
     border-radius: 15px;
     padding: .4em 1.4em;
@@ -490,12 +496,13 @@ nav{
     font-weight: 600;
     margin-top: 2em;
     margin-bottom: 2em;
+    width: 10em;
 }
 
 /*<-------- Sexto container -------->*/
 
 .six-cnt{
-    height: 75vh;
+    height: 60vh;
 }
 
 .six-sub-cnt{

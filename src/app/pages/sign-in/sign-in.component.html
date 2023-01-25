@@ -57,7 +57,7 @@
           <input type="checkbox" class="form-check-input">
           <label class="form-check-label" for="Check">Recordar mi Usuario</label>
         </div>
-        <button type="submit" class="button-ingresar" routerLink="/dashboard">
+        <button type="submit" class="button-color btn-ing" routerLink="/dashboard">
           Ingresar</button>
       </form>
     </ng-container>
@@ -71,8 +71,8 @@
           <input type="email" class="form-control" placeholder= "Correo" name="correo" [(ngModel)]="correo" required>
         </div>
 
-          <button type="submit" class="button-recuperar" data-bs-toggle="modal" data-bs-target="#recuperarModal" >Recuperar</button>
-          <button type="submit" (click)= "returnSignIn($event)" class="button-recuperar button-cancelar">Cancelar</button>
+          <button type="submit" class="button-color btn-ing" data-bs-toggle="modal" data-bs-target="#recuperarModal" >Recuperar</button>
+          <button type="submit" class="button-transparent btn-out" (click)= "returnSignIn($event)">Cancelar</button>
       </form>
     </ng-container>
 
@@ -91,15 +91,17 @@
           <div class="modal-body">
             <p> Se ha enviado un enlace de recuperacion de contraseña a al correo: {{correo}} </p>
           </div>
-            <button type="button" (click)= "returnNewPass($event)" class="button-modal_aceptar" data-bs-dismiss="modal">Aceptar</button>
+          <div class="ctn-acept">
+            <button type="button" (click)= "returnNewPass($event)" class="button-color" data-bs-dismiss="modal">Aceptar</button>
+          </div>
         </div>
       </div>
     </div>
 
   <!-- Formulario para nueva Password -->
 
-    <ng-container *ngIf= "isShownNewPass">
-      <h4 class="msjRecuperacionContraseña">Ingresa tu nueva contraseña, para aplicar el cambio inmediamente</h4>
+    <ng-container *ngIf="isShownNewPass">
+      <h4 class="msj-rec-password">Ingresa tu nueva contraseña, para aplicar el cambio inmediamente</h4>
 
       <form [formGroup]="formularioPass" (ngSubmit)="submitFormularioShow()" class="recovery_form">
         <div class="input_form">
@@ -146,8 +148,8 @@
           </span>
         </div>
 
-          <button type="submit" class="button-recuperar" [disabled]="formularioPass.invalid" data-bs-toggle="modal" data-bs-target="#restaurarModal" style="margin-top: 1em;" >Restaurar</button>
-          <button type="submit" class="button-recuperar button-cancelar" (click)= "returnSignIn($event)">Cancelar</button>
+          <button type="submit" class="button-color btn-ing" [disabled]="formularioPass.invalid" data-bs-toggle="modal" data-bs-target="#restaurarModal" >Restaurar</button>
+          <button type="submit" class="button-transparent btn-out" (click)= "returnSignIn($event)">Cancelar</button>
       </form>
     </ng-container>
 
@@ -166,7 +168,10 @@
           <div class="modal-body">
             <p>Tu contraseña se ha restaurado exitosamente. <br> Ya puedes acceder a tu cuenta con nueva contraseña.</p>
           </div>
-            <button type="button" (click)= "returnSignIn($event)" class="button-modal_aceptar" data-bs-dismiss="modal">Aceptar</button>
+
+          <div class="ctn-acept">
+            <button type="button" (click)= "returnSignIn($event)" class="button-color" data-bs-dismiss="modal">Aceptar</button>
+          </div>
         </div>
       </div>
     </div>

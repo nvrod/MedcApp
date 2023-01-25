@@ -194,8 +194,8 @@ input{
     align-items: center;
   }
 
-  .msjRecuperacionContraseña{
-    font-size: 1rem;
+  .msj-rec-password{
+    font-size: 1rem !important;
     margin-top: -2rem;
     margin-bottom: 2rem;
     margin-left: 4rem;
@@ -203,7 +203,7 @@ input{
   }
   
   @media only screen and (max-width: 600px ) {
-    .msjRecuperacionContraseña{
+    .msj-rec-password{
       font-size: 1rem;
       margin-top: -2rem;
       margin-bottom: 2rem;
@@ -213,7 +213,7 @@ input{
   }
   
   @media only screen and (max-width: 400px ) {
-    .msjRecuperacionContraseña{
+    .msj-rec-password{
       font-size: 1rem;
       margin-top: -2rem;
       margin-bottom: 2rem;
@@ -280,3 +280,41 @@ input{
     align-items: center;
   }
 
+
+
+.button-color{
+    border-radius: 15px;
+    height: 2.5em;
+    padding: 0.3em 1.4em;
+    width: 10em;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.1em;
+    background-color: var(--main_color);
+}
+
+
+.btn-ing{
+  margin-top: 1em;
+}
+
+.button-transparent{
+  background-color: transparent;
+  border-radius: 15px;
+  padding: .4em 1.4em;
+  color: var(--main_color);
+  font-weight: 600;
+  width: 10em;
+  font-size: 1.1em;
+}
+
+.btn-out{
+  margin-top: 1em;
+}
+
+.ctn-acept{
+  display: flex;
+  justify-content: center;
+  padding: .5em;
+  padding-bottom: 1em;
+}
